@@ -51,6 +51,9 @@ class ASCIIPrinter:
         self._chars_allowed: Set[ASCIICharacter] = self._get_chars()
         self.has_printed: bool = False
 
+    def __str__(self):
+        return self._string
+
     def __repr__(self):
         return f"{type(self).__name__}({self._string!r})"
 
