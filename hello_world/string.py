@@ -73,7 +73,9 @@ class ASCIIString:
     def __hash__(self):
         return hash(tuple(self.chars))
 
-    def __iter__(self, *, as_strings: bool = False) -> Iterable[Union[ASCIICharacter, str]]:
+    def __iter__(
+        self, *, as_strings: bool = False
+    ) -> Iterable[Union[ASCIICharacter, str]]:
         if as_strings:
             return iter(map(str, self.chars))
         else:

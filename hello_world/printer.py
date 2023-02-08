@@ -102,7 +102,9 @@ class ASCIIPrinter:
         if invalid_chars:
             raise InvalidCharactersException(str(string), invalid_chars)
         else:
-            bytes_printed = file.write(str(string)) if file else stdout.write(str(string))
+            bytes_printed = (
+                file.write(str(string)) if file else stdout.write(str(string))
+            )
             self.has_printed = True
 
             return bytes_printed

@@ -8,6 +8,8 @@ def parse_args() -> Namespace:
         description="Prints a string to the console.",
     )
 
-    parser.add_argument("-s", "--string", help="The string to print.", default="Hello, world!")
+    parser.add_argument(
+        "-s", "--string", help="The string to print.", default="Hello, world!"
+    )
 
     return parser.parse_args()
